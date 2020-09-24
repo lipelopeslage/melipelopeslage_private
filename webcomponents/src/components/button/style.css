@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+}
+
+button {
+  display: flex;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  padding: 12px 12px 17px;
+  font-size: 30px;
+  line-height: 30px;
+  background-color: #006a71;
+  color: #d3de32;
+  justify-content: center;
+  box-shadow: 2px 2px 0px #acb523;
+}
+
+button:not(disabled) {
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "boto-components",
+  "version": "0.0.0",
+  "description": "A approach for agnostic webcomponents",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webcomponents"
+  ],
+  "author": "Felipe Lopes Lage",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "to-string-loader": "^1.1.6",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-livereload-plugin": "^2.3.0"
+  }
+}
