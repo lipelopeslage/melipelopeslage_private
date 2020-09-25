@@ -1,9 +1,11 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    "header": "./src/components/header",
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   watchOptions: {
