@@ -13,7 +13,7 @@ class Header extends BotoElement {
     return `
     <style>${css}</style>
     <header>
-      SEARCH BAR
+      <slot></slot>
     </header>
   `
   }
@@ -22,9 +22,7 @@ class Header extends BotoElement {
     this.shadowRoot.querySelector('header').addEventListener('click', () => this.dispatchEvent(new CustomEvent('blabla')))
   }
 
-  hidden() {
-    
-  }
+  hidden() {}
 }
 
 BotoElement.register('meli-header', Header)

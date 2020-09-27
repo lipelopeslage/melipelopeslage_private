@@ -19,7 +19,8 @@ app.get('/api/items', async (req, res) => {
     query: { q }
   } = req
   try {
-    res.json(await meliRequest.get(`https://api.mercadolibre.com/sites/MLA/search?q=${q}`))
+    const response = await meliRequest.get(`https://api.mercadolibre.com/sites/MLA/search?q=${q}`)
+    res.json({...response, results: response?.results?.slice(0, 4)})
   } catch (e) {
     res.json(e)
   }

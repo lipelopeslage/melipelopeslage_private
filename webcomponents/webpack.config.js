@@ -3,6 +3,9 @@ const path = require('path')
 module.exports = {
   entry: {
     "header": "./src/components/header",
+    "search": "./src/components/search",
+    "input": "./src/components/input",
+    "button": "./src/components/button",
   },
   output: {
     filename: '[name].js',

@@ -4,8 +4,8 @@ import BotoElement from '../../utils/component.js'
 class Button extends BotoElement {
   constructor() {
     super()
-    this._button = null
-    this._clickHandler = this.clickHandler.bind(this)
+    this.$button = this.shadowRoot.querySelector('button')
+    this.clickHandler = this.onClick.bind(this)
   }
 
   slotChange() {}
@@ -13,23 +13,23 @@ class Button extends BotoElement {
   html() {
     return `
     <style>${css}</style>
-      <button>
-      </button>
+    <button>
+      <slot></slot>
+    </button>
   `
   }
 
-  clickHandler() {
-    alert('ola')
-  }
-
   showed() {
-    this._button = this.shadowRoot.querySelector('button')
-    this._button.addEventListener('click', this._clickHandler)
+    this.$button.addEventListener('click', this.clickHandler)
   }
 
   hidden() {
-    this._button.removeEventListener('click', this._clickHandler)
+    this.$button.removeEventListener('click', this.clickHandler)
+  }
+
+  onClick() {
+    this.dispatchEvent(new CustomEvent('MeliClickEvent'))
   }
 }
 
-BotoElement.register('boto-button', Button)
+BotoElement.register('meli-button', Button)
