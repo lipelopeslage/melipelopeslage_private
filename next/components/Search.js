@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from 'react'
 
 export const Search = ({ query }) => {
   const searchRef = useRef()
+  
+  useEffect(() => {
+    query && localStorage.setItem('lastSearch', query)
+  }, [])
 
   useEffect(() => {
     if (searchRef.current) {
@@ -11,11 +15,9 @@ export const Search = ({ query }) => {
 
   return (
     <>
-      <form>
-        <meli-search query={query} ref={searchRef}>
-          <span className='search-icon'></span>
-        </meli-search>
-      </form>
+      <meli-search query={query} ref={searchRef}>
+        <span className='search-icon'></span>
+      </meli-search>
     </>
   )
 }

@@ -1,0 +1,32 @@
+html {
+  --space-tiny: 8px;
+  --space-default: 16px;
+  --space-medium: 24px;
+  --space-large: 32px;
+
+  --icon-size-default: 18px;
+  --border-radius-default: 4px;
+  
+  --font-size-xs: 12px;
+  --font-size-small: 14px;
+  --font-size-default: 16px;
+  --font-size-md: 18px;
+  --font-size-large: 24px;
+  --font-size-xl: 46px;
+
+  --white: #FFFFFF;
+  --gray-light-text: #999999;
+  --gray-text: #333333;
+  --gray-background: #EEEEEE;
+
+
+  --margin-tiny: var(--space-tiny);
+  --margin-default: var(--space-default);
+  --margin-medium: var(--space-medium);
+  --margin-large: var(--space-large);
+
+  --padding-tiny: var(--space-tiny);
+  --padding-default: var(--space-default);
+  --padding-medium: var(--space-medium);
+  --padding-large: var(--space-large);
+}

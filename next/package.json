@@ -1,7 +1,9 @@
 {
-  "name": "next",
+  "name": "melipelopeslage",
   "version": "0.1.0",
   "private": true,
+  "author": "Felipe Lopes Lage",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

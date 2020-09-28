@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/globals.css'
+import { BreadCrumb } from '../components/BreadCrumb'
 import { Search } from './../components/Search'
 
 const Wrapper = ({ children, loaded }) => (
@@ -13,18 +14,18 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     import('../../webcomponents/dist/main.js')
-    setTimeout(() => setLoaded(true), 100)
+    setTimeout(() => setLoaded(true), 200)
   }, [])
 
   return (
     <Wrapper loaded={loaded}>
-      <meli-header>
+      <meli-header role="banner">
         <a className='nav-logo' tabIndex='2' href='/'>
           Mercado Livre Brasil - Onde comprar e vender de Tudo
         </a>
         <Search query={pageProps.query} />
       </meli-header>
-      <aside className='breadcrumb'></aside>
+      <BreadCrumb props={pageProps}/>
       <Component {...pageProps} />
     </Wrapper>
   )

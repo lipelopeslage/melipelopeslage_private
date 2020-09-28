@@ -12,5 +12,6 @@ npm ci
 echo "Starting node server..."
 npm start &
 cd ../next
+yarn
 yarn build
 yarn start

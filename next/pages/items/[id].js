@@ -8,10 +8,11 @@ function Item({ product }) {
         <title>Descontaço em {product.title} - Mercado Livre Brasil</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
       <section className={styles.section}>
         <div className={styles.productInfo}>
           <div className={styles.productImage}>
-            <img src={product?.pictures[0]?.url} />
+            <img src={product?.pictures[0]?.url} alt={`Imagem de ${product.title}`} />
           </div>
           <div className={styles.productBuy}>
             <h2>
@@ -20,8 +21,11 @@ function Item({ product }) {
               </small>
               {product.title}
             </h2>
+            <div className={styles.productImageMobile}>
+              <img src={product?.pictures[0]?.url} alt={`Imagem de ${product.title}`}/>
+            </div>
             <p>$ {product?.price}</p>
-            <meli-button>Comprar</meli-button>
+            <meli-button onClick={() => window.open(product.permalink, '_blank')}>Comprar</meli-button>
           </div>
         </div>
         <div className={styles.productDescription}>

@@ -16,7 +16,7 @@ function Items({ products }) {
           <div className={styles.productCard} key={uuid()}>
             <Link href={`/items/${product.id}`}>
               <a>
-                <img src={product?.thumbnail} />
+                <img src={product?.thumbnail} alt={`Imagem de ${product.title}`} />
                 <div className={styles.productInfo}>
                   <div className={styles.priceAddress}>
                     <span className={`${styles.price} ${product?.shipping?.free_shipping ? styles.freeShipping : ''}`}>$ {product?.price}</span>

@@ -1,10 +1,10 @@
 .productCard {
   display: flex;
-  padding: 16px;
+  padding: var(--padding-default);
 }
 
 .productCard {
-  display: flex;
+  display: var(--margin-default);
   flex-direction: column;
 }
 
@@ -12,9 +12,9 @@
   display: flex;
   position: relative;
   height: 2px;
-  background: #EEEEEE;
-  margin: 0 4px;
-  top: 16px;
+  background: var(--gray-backgronud);
+  margin: 0 var(--margin-tiny);
+  top: var(--margin-default);
   content: '';
 }
 
@@ -22,63 +22,80 @@
   border-top: 0;
 }
 
-  .productCard img {
-    width: 180px;
-    height: 180px;
-    border-radius: 4px;
-  }
+.productCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--border-radius-default);
+}
 
-  .productCard a {
-    display: flex;
-    width: 100%;
-    color: #333333;
-  }
+.productCard a {
+  display: flex;
+  width: 100%;
+  color: var(--gray-text);
+}
 
-  .productInfo {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    color: #333333;
-    margin-left: 16px;
-  }
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: var(--gray-text);
+  margin-left: var(--margin-default);
+}
 
-    .productInfo .priceAddress {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-    }
+.productInfo .priceAddress {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--margin-default);
+}
 
-      .productInfo .priceAddress .price {
-        display: flex;
-        font-size: 24px;
-        margin: 16px 0 16px;
-        width: 80%;
-      }
+.productInfo .priceAddress .price {
+  display: flex;
+  font-size: var(--font-size-large);
+  margin: var(--margin-default) 0 0;
+  width: 80%;
+}
 
-      .productInfo .priceAddress .freeShipping:after {
-        display: flex;
-        width: 18px;
-        height: 18px;
-        margin-left: 8px;
-        background-size: contain;
-        background-image: url("./../assets/ic_shipping@2x.png");
-        content: '';
-      }
+.productInfo .priceAddress .freeShipping:after {
+  display: flex;
+  width: var(--icon-size-default);
+  height: var(--icon-size-default);
+  margin-left: var(--margin-tiny);
+  background-size: contain;
+  background-image: url('./../assets/ic_shipping@2x.png');
+  content: '';
+}
 
-      .productInfo .priceAddress .addressState {
-        display: flex;
-        font-size: 12px;
-        color: #666666;
-      }
+.productInfo .priceAddress .addressState {
+  display: flex;
+  font-size: var(--font-size-xs);
+  color: var(--gray-light-text);
+  margin-top: var(--margin-tiny);
+}
 
-    .productInfo .title {
-      display: flex;
-      font-weight: 100;
-      font-size: 18px;
-      margin: 0;
-    }
+.productInfo .title {
+  display: flex;
+  font-weight: 100;
+  font-size: var(--font-size-md);
+  margin: 0;
+}
 
 .productList {
   width: 100%;
   flex-direction: column;
+}
+
+@media (min-width: 1124px) {
+  .productCard img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .productInfo .priceAddress {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .productInfo .priceAddress .addressState {
+    margin: 0;
+  }
 }

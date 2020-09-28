@@ -1,12 +1,11 @@
 {
-  "name": "boto-components",
-  "version": "0.0.0",
+  "name": "meli-components",
+  "version": "0.1.0",
   "description": "A approach for agnostic webcomponents",
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "keywords": [
     "webcomponents"

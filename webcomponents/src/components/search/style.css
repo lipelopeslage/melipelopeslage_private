@@ -4,6 +4,7 @@
 
 :host form {
   display: flex;
+  width: 100%;
 }
 
 :host button {
@@ -16,7 +17,7 @@
 
 :host input {
   padding: 0;
-  width: 859px; /*width: 87%;*/
+  width: 95%; 
   text-indent: 8px;
   height: 38px;
   border: 0;
