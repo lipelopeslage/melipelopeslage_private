@@ -1,9 +1,13 @@
-import Button from '../../components/Button'
+import Head from 'next/head'
 import styles from '../../styles/Item.module.css'
 
 function Item({ product }) {
   return (
     <main>
+      <Head>
+        <title>Descontaço em {product.title} - Mercado Livre Brasil</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <section className={styles.section}>
         <div className={styles.productInfo}>
           <div className={styles.productImage}>
@@ -17,7 +21,7 @@ function Item({ product }) {
               {product.title}
             </h2>
             <p>$ {product?.price}</p>
-            <Button onClick={() => alert('clicou clicou')}>Comprar</Button>
+            <meli-button>Comprar</meli-button>
           </div>
         </div>
         <div className={styles.productDescription}>

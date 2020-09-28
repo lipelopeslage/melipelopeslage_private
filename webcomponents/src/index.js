@@ -1,4 +1,4 @@
 import './components/button'
-import './components/textInput'
+import './components/search'
 import './components/header'
-import './components/thermometer'
+import './components/input'

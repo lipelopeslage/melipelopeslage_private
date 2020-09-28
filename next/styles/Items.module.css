@@ -55,6 +55,16 @@
         width: 80%;
       }
 
+      .productInfo .priceAddress .freeShipping:after {
+        display: flex;
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+        background-size: contain;
+        background-image: url("./../assets/ic_shipping@2x.png");
+        content: '';
+      }
+
       .productInfo .priceAddress .addressState {
         display: flex;
         font-size: 12px;

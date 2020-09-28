@@ -7,7 +7,7 @@ function Items({ products }) {
   return (
     <main>
       <Head>
-        <title>About</title>
+        <title>Busca no Mercado Livre Brasil</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -19,7 +19,7 @@ function Items({ products }) {
                 <img src={product?.thumbnail} />
                 <div className={styles.productInfo}>
                   <div className={styles.priceAddress}>
-                    <span className={styles.price}>$ {product?.price}</span>
+                    <span className={`${styles.price} ${product?.shipping?.free_shipping ? styles.freeShipping : ''}`}>$ {product?.price}</span>
                     <span className={styles.addressState}>{product?.address?.state_name}</span>
                   </div>
                   <h2 className={styles.title}>{product.title}</h2>
@@ -34,12 +34,12 @@ function Items({ products }) {
 }
 
 export async function getServerSideProps({ query }) {
-  const res = await fetch(`http://localhost:6000/api/items?q=${query.q}`)
+  const res = await fetch(`http://localhost:6000/api/items?q=${query.search}`)
   const response = await res.json()
   return {
     props: {
       products: response?.results,
-      query: query.q
+      query: query.search
     }
   }
 }

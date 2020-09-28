@@ -21,14 +21,33 @@ a {
   flex-direction: column;
 }
 
+#app {
+  display: none;
+  flex-direction: column;
+}
+
+  #app.loaded {
+    display: flex;
+  }
+
 .nav-logo {
-  width: 134px;
+  width: 56px;
   height: 38px;
+  margin-right: 18px;
   text-indent: -999px;
   overflow: hidden;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("./../assets/Logo_ML@2x.png.png");
+  background-image: url("./../assets/Logo_ML@2x.png");
+}
+
+
+.search-icon {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-image: url(./../assets/ic_Search@2x.png);  
 }
 
 .breadcrumb {
