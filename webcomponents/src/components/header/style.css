@@ -1,3 +1,13 @@
 :host header {
-  background-color: yellow;
+  display: flex;
+  height: 58px;
+  justify-content: center;
+  background-color: #FFE600;
+}
+
+:host slot {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  max-width: 980px;
 }

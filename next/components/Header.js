@@ -10,7 +10,12 @@ function Header({ children }) {
   }, [headerRef.current])
   return (
     <>
-      <meli-header ref={headerRef}>[HeaderLogo]{children}</meli-header>
+      <meli-header ref={headerRef}>
+        <a className='nav-logo' tabIndex='2' href='/'>
+          Mercado Livre Brasil - Onde comprar e vender de Tudo
+        </a>
+        {children}
+      </meli-header>
     </>
   )
 }

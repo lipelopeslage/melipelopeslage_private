@@ -1,45 +1,41 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { v4 as uuid } from 'uuid'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Items.module.css'
 
 function Items({ products }) {
   return (
-    <div className={styles.container}>
+    <main>
       <Head>
         <title>About</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className={styles.main}>
-        Main content
+      <section className={styles.productList}>
         {products.slice(0, 4).map((product) => (
-          <div key={uuid()}>
+          <div className={styles.productCard} key={uuid()}>
             <Link href={`/items/${product.id}`}>
               <a>
                 <img src={product?.thumbnail} />
-                <p>{product?.price}</p>
-                <p>
-                  {product.title}
-                  <small>{product?.address?.state_name}</small>
-                </p>
-                <hr/>
+                <div className={styles.productInfo}>
+                  <div className={styles.priceAddress}>
+                    <span className={styles.price}>$ {product?.price}</span>
+                    <span className={styles.addressState}>{product?.address?.state_name}</span>
+                  </div>
+                  <h2 className={styles.title}>{product.title}</h2>
+                </div>
               </a>
             </Link>
           </div>
         ))}
-      </main>
-    </div>
+      </section>
+    </main>
   )
 }
 
 export async function getServerSideProps({ query }) {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
   const res = await fetch(`http://localhost:6000/api/items?q=${query.q}`)
   const response = await res.json()
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
   return {
     props: {
       products: response?.results,

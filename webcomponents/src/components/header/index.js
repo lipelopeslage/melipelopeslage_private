@@ -12,7 +12,7 @@ class Header extends BotoElement {
   html() {
     return `
     <style>${css}</style>
-    <header>
+    <header role="banner">
       <slot></slot>
     </header>
   `

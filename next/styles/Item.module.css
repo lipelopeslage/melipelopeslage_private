@@ -1,0 +1,72 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.productImage {
+  display: flex;
+  width: 680px;
+  margin-left: -16px;
+  justify-content: center;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  color: #333333;
+  margin-left: 16px;
+}
+
+.productBuy {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 248px;
+  margin-top: 16px;
+}
+
+  .productBuy h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    margin: 0 0 32px 0;
+  }
+
+  .productBuy p {
+    display: flex;
+    font-size: 46px;
+    margin: 0 0 36px 0;
+  }
+
+  .productBuy small {
+    display: flex;
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 16px;
+  }
+
+  .productBuy meli-button {
+    width: 100%;
+  }
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 100px 0 0 32px;
+}
+
+.productDescription h3 {
+  margin: 0 0 32px 0;
+  font-weight: 100;
+  color: #333333;
+}
+
+.productDescription p {
+  margin: 0;
+  font-size: 16px;
+  color: #999999;
+}
+

@@ -14,7 +14,8 @@ class Search extends BotoElement {
   html() {
     return `
     <style>${css}</style>
-    <input type="text"/><button type="submit">buscar</button>
+    <input type="text" class="nav-search-input" aria-label="Digite o que você quer encontrar" name="as_word" placeholder="Buscar produtos, marcas e muito mais…" maxlength="120" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" tabindex="3" value="busca">
+    <button type="submit"><div aria-label="Buscar"></div></button>
   `
   }
 
